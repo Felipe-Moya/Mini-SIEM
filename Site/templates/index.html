@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul style="color: red;">
+          {% for message in messages %}
+            <li>{{ message }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    
+    {% if logged_in %}
+        <h2>Bem-vindo, {{ user_name }}!</h2>
+        <p>Você está logado.</p>
+        <p><a href="{{ url_for('logout') }}">Sair da conta</a></p>
+    {% else %}
+        <p>Você não está vinculado a uma conta, crie uma ou entre em uma caso já possua:</p>
+        <ul>
+            <li><a href="{{ url_for('login') }}">Login</a></li>
+            <li><a href="{{ url_for('cadastro') }}">Cadastro</a></li>
+        </ul>
+    {% endif %}
+
+</body>
+</html>
