@@ -17,11 +17,11 @@ Sistema de monitoramento de segurança composto por um site Flask para autentica
 - Registro de todos os eventos no banco de dados
 
 ### Dashboard (PySide6)
-- **Visão Geral** Cards com totais de eventos, falhas, logins, IPs únicos e contas bloqueadas + gráfico de atividade dos últimos 30 dias
-- **Logs** Tabela paginada com filtros por usuário, evento, resultado e período
-- **Alertas** Monitoramento em tempo real com polling a cada 5s, som de alerta, detecção de IPs suspeitos e bloqueios
-- **Desbloquear Contas** Gerenciamento de contas bloqueadas temporária ou permanentemente
-- **Configurações** Gerenciamento da conta do painel, intervalo de polling e som
+- **Visão Geral** - Cards com totais de eventos, falhas, logins, IPs únicos e contas bloqueadas + gráfico de atividade dos últimos 30 dias
+- **Logs** - Tabela paginada com filtros por usuário, evento, resultado e período
+- **Alertas** - Monitoramento em tempo real com polling a cada 5s, som de alerta, detecção de IPs suspeitos e bloqueios
+- **Desbloquear Contas** - Gerenciamento de contas bloqueadas temporária ou permanentemente
+- **Configurações** - Gerenciamento da conta do painel, intervalo de polling e som
 
 ---
 
@@ -113,7 +113,7 @@ Acesse em `http://localhost:5000`
 python Software/main.py
 ```
 
-> **Variáveis de ambiente opcionais** Para sobrescrever as configurações padrão do banco:
+> **Variáveis de ambiente opcionais** - Para sobrescrever as configurações padrão do banco:
 > ```
 > SIEM_DB_HOST, SIEM_DB_PORT, SIEM_DB_NAME, SIEM_DB_USER, SIEM_DB_PASS
 > SIEM_SECRET_KEY
